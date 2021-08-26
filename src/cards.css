@@ -8,56 +8,101 @@ html {
 
 .icon {color: #BCD2DA;}
 
+.cardGroup {
+  margin: 25px auto;
+}
+
 .card {
-    /* display, flex-direction */
-    border: 1px solid #CAD0D2;
-    border-radius: 4px;
-    overflow: hidden;
+  /* display, flex-direction */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CAD0D2;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .card__description {
-    /* display, flex-direction, justify-content, align-items */
-    padding: 15px 0;
+  /* display, flex-direction, justify-content, align-items */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
 }
 
 .card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
 
 .card__descriptionText {
-    color: #57727C;
-    font-size: 12px;
-    text-align: center;
-    max-width: calc(100% - 30px);
+  color: #57727C;
+  font-size: 12px;
+  text-align: center;
+  max-width: calc(100% - 30px);
 }
 
 .card__price {
-    text-align: center;
-    color: #57727C;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 5px 15px;
-    border-top: 1px solid #D7DBDD;
-    background-color: #EEF3F5;
+  text-align: center;
+  color: #57727C;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 15px;
+  border-top: 1px solid #D7DBDD;
+  background-color: #EEF3F5;
 }
 
 .cardGroup {
-    /* display */
-  
-    border: 1px solid #CAD0D2;
-    border-radius: 4px;
-    overflow: hidden;
+  /* display */
+  display: flex;
+  border: 1px solid #CAD0D2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+  .cardGroup__card {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.334%;
+    border: none;
+    border-radius: 0;
   }
-  
-    .cardGroup__card {
-      /* flex-grow, flex-shrink, flex-basis */
-  
-      border: none;
-      border-radius: 0;
-    }
-  
-    .cardGroup__card {
-      border-left: 1px solid #D7DBDD;
-    }
-  
-    .cardGroup__cardDescription {
-      /* flex-grow, flex-shrink, flex-basis */
-    }
+
+  .cardGroup__card {
+    border-left: 1px solid #D7DBDD;
+  }
+
+  .cardGroup__cardDescription {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+
+
+
+/* Media Queries */
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  html {
+    font-weight: bold;
+  }
+
+  .cardGroup {
+    max-width: 320px;
+    background-color: #edf3f5;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .cardGroup {
+    max-width: 320px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 769px) {
+  .cardGroup {
+    max-width: 710px;
+  }
+}
